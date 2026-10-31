@@ -1,0 +1,221 @@
+/**
+there is something callled CLS (cumiliative layout shift)
+if there is a hidden a button and on an action we want the 
+button to appear, so when the button appears the whole page 
+layout may shift it may bother the user for that not to happen 
+we use position relative as we have used in createPostContainer
+if we did not give it the position relative so the uploadButton
+would make the body its paren but as we have given the button
+position relative now we can design it according to the 
+createPostContainer 
+constraintlayout: the parent element is given a style relative 
+position and the child element is given absolute so whatever 
+style is given to the child now it becomes relative to the parent
+*/
+
+.scrollComponent{
+    display: flex;
+    justify-content: center;
+}
+
+.createPostContainer {
+    display: flex;
+    height: 10svh;
+    width: 100%;
+    padding-inline: 0.8rem;
+    gap: 1.3rem;
+    position: relative;
+    align-items: center;
+    background: rgb(246, 228, 228);
+    border-radius: 20px;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    max-width: 80%;
+}
+
+.uploadButton{
+    position: absolute;
+    right: 1px;
+    bottom: -35px;
+    font-size: 13px;
+    background: rgb(207, 177, 224);
+    padding-inline: 0.5rem;
+    padding-block: 0.5rem;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    color:aliceblue;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.uploadButton:hover{
+    background: rgb(192, 94, 249);
+}
+
+.userProfile{
+    border-radius: 100%;
+    height: 50%;
+    width: fit-content;
+}
+
+.createPostContainer > textarea {
+    width: 100%;
+}
+
+.Fab{
+    background: rgb(207, 177, 224);
+    border-radius: 80%;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.Fab:hover{
+transform: scale(1.06);
+background: rgb(192, 94, 249);
+}
+
+.Fab > svg {
+    width: fit-content;
+      height: 25px;
+      color:aliceblue;
+}
+
+.textArea{
+    width: 80%;
+    height: 70%;
+     border: 1px solid silver;
+    border-radius: 10px;
+    padding-inline: 1.5rem;
+    padding-block: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.singleCard{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: 1px solid rgb(179, 179, 179);
+}
+
+.singleCard__profileContainer{
+display: flex;
+align-items: flex-start;
+gap: 1.2rem;
+padding: 1.2rem;
+padding-right: 3rem;
+}
+
+.singleCard__profileContainer > img {
+    width: 12%;
+    border-radius: 40%;
+}
+
+.singleCard__image{
+    width: 100%;
+    padding-top: 0.6rem;
+    height:fit-content;
+    overflow: hidden;
+}
+
+.singleCard__image > img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.optionsContainer{
+    display:flex;
+    height: 20%;
+    width: 100%;
+    justify-content: space-between;
+    gap: 5rem;
+   padding-top: 0.7rem;
+}
+.singleOption__optionsContainer{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.singleOption__optionsContainer > svg{
+    height: 100%;
+    width: 100%;
+    min-width: 1rem;
+    cursor: pointer;
+}
+
+.singleOption__optionsContainer > svg:hover{
+    transform: scale(1.06);
+}
+
+.commentsContainer{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+}
+
+.allCommentsContainer{
+    min-width: 50svw;
+    height: 80vh;
+    max-width: 1120px;
+    background: white;
+    border-radius: 10px;
+    position: relative;
+    padding: 1.4rem;
+}
+
+.postCommentsContainer{
+    position: absolute;
+    bottom: 1.2rem;
+    left: 1.2rem;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.postCommentsContainer > input{
+    flex: 0.9;
+    padding-inline: 1.5rem;
+    padding-block: 1.2rem;
+    border: none;
+    outline: none;
+    background-color: rgb(240, 217, 221);
+    border-radius: 10px;
+}
+.postCommentsContainer > input:focus{
+    border: 1px solid silver;
+}
+
+.postCommentsContainer__commentBtn{
+    flex: 0.1;
+    width: fit-content;
+   padding: 1.2rem;
+   background: pink;
+   border-radius: 10px;
+   text-align: center;
+   color: aliceblue;
+   cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .allCommentsContainer{
+        width: 90%;
+    }
+}

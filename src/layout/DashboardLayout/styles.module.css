@@ -1,0 +1,112 @@
+/**
+rem is flexible which means the svg is given a size in rem 
+so if the text home beside svg gets smaller or bigger the svg 
+size will dec. or inc. according to the size of the text
+the top most elemet of a DOM tree is body so to change the size 
+of an element(which is given rem) according to the font style of 
+the top-most element of DOM, we use rem otherwise we will use em
+*/
+
+.all{
+    font-family: var(--font-technor);
+}
+
+
+.homeContainer{
+    display: flex;
+}
+
+.homeContainer > div:nth-child(odd){
+    flex: 0.2;
+}
+
+.homeContainer > div:nth-child(even){
+    flex: 0.6;
+}
+.homeContainer__leftBar{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: start;
+    border-right: 1px solid whitesmoke;
+}
+
+.sideBarOptions{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    gap: 1.2rem;
+    width: 80%;
+    max-width: 80%;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sideBarOptions:hover{
+    transform: scale(1.06);
+}
+
+.sideBarOptions > svg{    
+    max-height: 1.2em; 
+    min-height: 1.2em;
+    min-width: fit-content;
+}
+
+.extraContainer{
+    border-left: 1px solid whitesmoke;
+    padding-left: 1.2rem;
+}
+
+.feedContainer{
+    padding-inline: 0.8rem;
+}
+
+/**
+media queries for responsiveness
+till 600 px it will work 
+extracontainer will dissapear
+media queries have to be written atlast at the end of other styles to wich \
+this will be applied other wise media queries would not work
+*/
+.mobileNavBar{
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100vw;
+   height: 6vh;
+
+   display: none;
+   justify-content: space-around;
+   background: white;
+   align-items: center;
+}
+
+.singleItem__mobileView svg{
+    height: 2rem;
+    width: 2rem;
+
+}
+
+
+@media only screen and (max-width: 600px){
+    .extraContainer{
+        display: none;
+    }
+
+   .homeContainer{
+    display: block;
+   } 
+
+   .homeContainer__leftBar{
+    display: none;
+   }
+   .mobileNavBar{
+    display: flex;
+   }
+
+   .feedContainer{
+    padding-bottom: 8vh;
+   }
+}
+

@@ -1,0 +1,26 @@
+/**
+display flex : all the elements under that particular classname will be aligned on a sigle row
+wrapping elements uder a div tag will automatically put the elemnts in a column form 1 by 1
+*/
+
+.allUserProfile{
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding-top: 1rem;
+}
+
+.userCard{
+    display: flex; 
+    gap: 1.2rem;
+    padding: 1.3rem;
+    cursor: pointer;
+    align-items: center;
+    box-shadow: 10px 10px 10px 0 rgb(156, 155, 155, 0.7)
+}
+
+.userCard > img{
+    width: 10%;
+    border-radius: 20%;
+}

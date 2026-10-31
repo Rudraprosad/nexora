@@ -1,0 +1,38 @@
+.userCard{
+    display: flex;
+    width: 100%;
+    gap: 1.2rem;
+    padding: 1.3rem;
+    align-items: center;
+    box-shadow: 10px 10px 10px 0px #9146FF;
+    cursor: pointer;
+}
+
+.profilePic>img{
+    width: 6.5rem;
+    border-radius: 20px;
+}
+
+.myConnections{
+
+}
+
+.acceptBtn{
+font-family: var(--font-technor);
+    font-weight: 900;
+    padding-inline: 0.8rem;
+    padding-block: 0.3rem;
+     background-color: #9146FF;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid rgba(214, 4, 242, 0.5) ;
+}
+
+.acceptBtn:hover{
+    transform: translate(4px, -4px);
+box-shadow: -4px 4px 0 0 rgba(214, 4, 242, 0.5);
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+}

@@ -1,0 +1,29 @@
+.container{
+    font-family: var(--font-technor);
+    padding: 1.2rem;
+}
+
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navBarOptionContainer {
+    display: flex;
+}
+
+.buttonJoin {
+     width: fit-content;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s;
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    background: pink;
+    color:rgb(35, 41, 47);
+    padding-inline: 1.2rem;
+    padding-block: 0.5rem;
+    border-radius: 20px;
+}
+
