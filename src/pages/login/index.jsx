@@ -49,6 +49,7 @@ const [name, setName] = useState("");
    }
 
    const handleLogin = () => {
+   
     console.log("login...")
     dispatch(loginUser({email, password}))
    }
@@ -83,7 +84,7 @@ const [name, setName] = useState("");
                       handleRegister(); //the onClick is written to connect auth with backend
                     }
                  }} className={styles.buttonWithOutline}>
-                   <p> {userLoginMethod ? "Sign In" : "Sign Up"}</p> 
+                   <p> {authState.isLoading ? "Loading..." : (userLoginMethod ? "Sign In" : "Sign Up")}</p> 
                  </div>
                </div>
 
